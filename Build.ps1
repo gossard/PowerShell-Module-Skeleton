@@ -1,5 +1,5 @@
 function Get-SortedPs1Files([string]$FolderPath) {
-    Get-ChildItem $FolderPath -Filter '*.ps1' | Sort-Object 'Name'
+    Get-ChildItem $FolderPath -Filter '*.ps1' -File -Recurse | Sort-Object 'Name'
 }
 
 [string]$Encoding = "utf8"
